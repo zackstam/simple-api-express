@@ -9,6 +9,6 @@ RUN npm install
 
 COPY . /app
 
-CMD ["node", "app.js"]
+CMD ["node", "index.js"]
 
 EXPOSE 3000
