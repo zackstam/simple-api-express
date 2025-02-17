@@ -9,7 +9,7 @@ module.exports = {
         username: "root",
         password: "4dmin123",
         database: "simpleapi_db",
-        host: "localhost",
+        host: "127.0.0.1",
         dialect: "mysql",
         timezone: "+07:00",
         logging: true,
