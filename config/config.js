@@ -7,7 +7,7 @@ module.exports = {
     database: {
       development: {
         username: "root",
-        password: "",
+        password: "4dmin123",
         database: "simpleapi_db",
         host: "localhost",
         dialect: "mysql",
