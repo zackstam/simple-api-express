@@ -3,28 +3,19 @@ services:
   express-app:
     build: .
     container_name: express-app
-    networks:
-      - app-network
     depends_on:
       - mariadb
     ports:
       - "3000:3000" # Sesuaikan dengan port aplikasi Anda
-
   mariadb:
     image: mariadb:latest
-    container_name: mariadb-container
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: simpleapi_db
-      MYSQL_USER: root
-      MYSQL_PASSWORD: rootpassword
+    container_name: mariadb-app
     ports:
-      - "3306:3306"
+      - "3306:3306" # Memetakan port 3306 host ke port 3306 di container
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword # Password root MariaDB
     volumes:
       - C:\Users\User\projects\docker-app\mariadb:/var/lib/mysql
-    networks:
-      - app-network
-
 networks:
   app-network:
     driver: bridge

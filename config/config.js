@@ -7,9 +7,9 @@ module.exports = {
     database: {
       development: {
         username: "root",
-        password: "4dmin123",
+        password: "rootpassword",
         database: "simpleapi_db",
-        host: "127.0.0.1",
+        host: "mariadb-app",
         dialect: "mysql",
         timezone: "+07:00",
         logging: true,
